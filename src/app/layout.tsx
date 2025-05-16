@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Providers } from "../lib/providers";
 
 const figSans = Figtree({
   variable: "--font-fig-sans",
@@ -26,8 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <body className={`${figSans.variable} ${geistMono.variable} `}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
