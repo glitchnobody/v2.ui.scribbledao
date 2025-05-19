@@ -1,0 +1,199 @@
+.signup_flow_container {
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  .top_heading {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    span {
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 10px;
+      letter-spacing: -0.1px;
+      font-weight: 500;
+      color: var(--purple-600);
+      background: var(--purple-100);
+      border: 1px solid var(--purple-600);
+    }
+    h1 {
+      color: var(--stone-900);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.1em;
+      letter-spacing: -0.32px;
+    }
+  }
+
+  .username_input_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    label {
+      color: var(--stone-700, #1a1817);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: -0.12px;
+    }
+    div {
+      display: flex;
+      height: 36px;
+      flex-direction: row;
+      gap: 0px;
+      width: 100%;
+      overflow: hidden;
+      border: 2px solid var(--purple-300);
+      border-radius: 8px;
+      transition: border-color 0.2s var(--ease-default-linear);
+      &:focus-within {
+        border-color: var(--purple-600, #a259f7);
+      }
+      label {
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      input {
+        color: var(--stone-900, #1a1817);
+        font-size: 1rem;
+        font-weight: 500;
+        height: 100%;
+        width: 100%;
+        padding: 0px 12px;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: var(--stone-400, #9b9691);
+          font-size: 0.875rem;
+          font-weight: 400;
+        }
+      }
+      span {
+        background-color: var(--purple-600);
+        color: var(--stone-100);
+        display: flex;
+        align-items: center;
+        padding: 0px 12px;
+        gap: 4px;
+        height: 100%;
+      }
+    }
+    ul {
+      margin-top: 6px;
+      li {
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--stone-600,);
+        font-size: 0.875rem;
+        font-weight: 400;
+        letter-spacing: -0.0075rem;
+      }
+      .success {
+        color: var(--purple-500);
+      }
+    }
+  }
+  .email_input_section,
+  .otp_input_section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    label {
+      color: var(--stone-700, #1a1817);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: -0.12px;
+    }
+    input {
+      height: 32px;
+      width: 95%;
+      border: 2px solid var(--purple-300);
+      color: var(--stone-900, #1a1817);
+      font-size: 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+      padding: 0px 12px;
+      transition: border-color 0.2s var(--ease-default-linear);
+      &:focus {
+        outline: none;
+        border-color: var(--purple-600, #a259f7);
+      }
+      &::placeholder {
+        color: var(--stone-400, #9b9691);
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+    }
+    ul {
+      margin-top: 6px;
+      li {
+        cursor: pointer;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: var(--stone-600,);
+        font-size: 0.875rem;
+        font-weight: 400;
+        letter-spacing: -0.0075rem;
+      }
+      .success {
+        color: var(--purple-500);
+      }
+      .success_black {
+        color: var(--stone-900);
+      }
+    }
+  }
+}
+
+.button_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  button {
+    width: 100%;
+  }
+  .button_text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 2px;
+    color: var(--stone-400);
+    span {
+      width: fit-content;
+      text-decoration: underline;
+      display: inline;
+      color: var(--purple-400);
+    }
+  }
+  .error_text {
+    color: var(--red-500);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.0075rem;
+  }
+  span {
+    color: var(--stone-400);
+    text-align: center;
+    width: 100%;
+    font-size: 0.75rem;
+    font-weight: 400;
+    a {
+      color: var(--purple-400);
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+}

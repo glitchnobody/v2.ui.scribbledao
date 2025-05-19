@@ -1,7 +1,108 @@
-@import "tailwindcss";
-
 :root {
-  font-family: var(--font-fig-sans);
+  --shadow: 0 0 0.5rem 0.05rem rgba(0, 0, 0, 0.2);
+  --ease-default-linear: linear(
+    0,
+    0.255,
+    0.4449,
+    0.6018,
+    0.7355,
+    0.8513,
+    0.9525,
+    1.0413,
+    1.1195,
+    1.1881,
+    1.2484,
+    1.3011,
+    1.3468,
+    1.3862,
+    1.4198,
+    1.4479,
+    1.4709,
+    1.4892,
+    1.503,
+    1.5126,
+    1.5182,
+    1.52,
+    1.5189,
+    1.5156,
+    1.5101,
+    1.5025,
+    1.4929,
+    1.4817,
+    1.469,
+    1.4552,
+    1.4406,
+    1.4254,
+    1.4099,
+    1.3943,
+    1.3787,
+    1.3633,
+    1.3481,
+    1.3333,
+    1.3188,
+    1.3048,
+    1.2912,
+    1.278,
+    1.2653,
+    1.253,
+    1.2412,
+    1.2298,
+    1.2188,
+    1.2083,
+    1.1981,
+    1.1883,
+    1.1789,
+    1.1698,
+    1.1611,
+    1.1528,
+    1.1447,
+    1.137,
+    1.1296,
+    1.1225,
+    1.1156,
+    1.1091,
+    1.1028,
+    1.0967,
+    1.0909,
+    1.0854,
+    1.0801,
+    1.075,
+    1.0701,
+    1.0654,
+    1.061,
+    1.0567,
+    1.0526,
+    1.0488,
+    1.0451,
+    1.0415,
+    1.0382,
+    1.035,
+    1.032,
+    1.0292,
+    1.0265,
+    1.0239,
+    1.0215,
+    1.0193,
+    1.0172,
+    1.0152,
+    1.0134,
+    1.0117,
+    1.0101,
+    1.0086,
+    1.0073,
+    1.0061,
+    1.005,
+    1.004,
+    1.0032,
+    1.0024,
+    1.0018,
+    1.0012,
+    1.0008,
+    1.0004,
+    1.0002,
+    1,
+    1
+  );
   --yellow-100: oklch(0.98 0.12 109.96 / 1);
   --green-100: oklch(0.95 0.05 159.4 / 1);
   --green-200: oklch(0.9 0.09 160.24 / 1);
@@ -85,12 +186,33 @@
   --stone-950: oklch(0.16 0 17.33 / 1);
 }
 
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-family: var(--font-fig-sans);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-fig-sans);
   background-color: var(--lime-200);
   color: var(--stone-950);
+}
+
+button {
+  cursor: pointer;
 }
 
 .button_large {
@@ -100,8 +222,7 @@ body {
   align-items: center;
   gap: 4px;
   border-radius: 999999px;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.25s var(--ease-default-linear);
   white-space: nowrap;
 }
 .button_lime {
@@ -114,11 +235,28 @@ body {
   &:hover {
     background-color: var(--lime-400);
     transform: scale(1.05);
-    box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
   }
   &:active {
     background-color: var(--lime-200);
     transform: scale(0.75);
+    box-shadow: none;
+  }
+}
+
+.button_black {
+  background-color: var(--stone-800);
+  color: var(--stone-100);
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  line-height: normal;
+  &:hover {
+    background-color: var(--stone-950);
+    box-shadow: var(--shadow);
+  }
+  &:active {
+    background-color: var(--stone-900);
     box-shadow: none;
   }
 }

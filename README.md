@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scribble DAO UI
+
+This project implements a modern UI for Scribble DAO with Supabase authentication.
+
+## Authentication Features
+
+- Email OTP (One-Time Password) authentication
+- User profile with username field
+- Redux state management for authentication
+- Responsive UI with a notebook-style design
 
 ## Getting Started
 

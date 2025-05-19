@@ -5,6 +5,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { store } from "./redux/store";
 import { ReactNode, useState } from "react";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import AuthProvider from "./providers/AuthProvider";
 
 interface ProvidersProps {
   children: ReactNode;
@@ -27,7 +28,9 @@ export function Providers({ children }: ProvidersProps) {
   return (
     <ReduxProvider store={store}>
       <QueryClientProvider client={queryClient}>
-        {children} <ReactQueryDevtools initialIsOpen={false} />
+        <AuthProvider>
+          {children} <ReactQueryDevtools initialIsOpen={false} />
+        </AuthProvider>
       </QueryClientProvider>
     </ReduxProvider>
   );

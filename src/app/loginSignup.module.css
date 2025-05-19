@@ -12,12 +12,14 @@
   padding: 12px;
 }
 .auth_card_container {
+  position: relative;
+  z-index: 10;
   display: inline-flex;
   padding: 18px;
   justify-content: center;
   align-items: center;
   border-radius: 36px;
-  max-width: 480px;
+  max-width: 450px;
   width: 100%;
   background: var(--purple-950);
 }
@@ -55,12 +57,59 @@
   }
 }
 
+.middle_panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.flow_switch_container {
+  width: 100%;
+  max-width: 312px;
+  padding: 0px 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  button {
+    background-color: var(--stone-100);
+    padding: 4px 4px 12px 4px;
+    width: 70px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s var(--ease-default-linear);
+  }
+}
+
+.flow_switch_button {
+  width: 70px;
+  transition: all 0.4s var(--ease-default-linear);
+  &:hover {
+    transform: rotate(-3deg) scale(1.1);
+  }
+  &:active {
+    transform: rotate(-1deg) scale(1);
+  }
+}
+
+.inactive {
+  background: linear-gradient(
+    0deg,
+    var(--stone-400) 0%,
+    var(--stone-300) 15%,
+    var(--stone-100) 40%
+  );
+  color: var(--stone-400);
+}
+
 .bottom_bar {
   width: 100%;
   display: flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -69,7 +118,7 @@
 @media screen and (max-width: 480px) {
   .login_signup_background {
     padding: 0px;
-    background: var(--purple-900);
+    background: var(--purple-950);
   }
   .auth_card_container {
     display: inline-flex;

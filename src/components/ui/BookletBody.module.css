@@ -1,0 +1,50 @@
+.booklet_container {
+  width: 100%;
+  min-height: 400px;
+  max-width: 312px;
+  border-radius: 12px;
+
+  background-color: var(--stone-100);
+  display: flex;
+  padding: 24px 24px 24px 18px;
+  align-items: center;
+  position: relative;
+  .rings {
+    position: absolute;
+    position: absolute;
+    left: -8px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    gap: 12px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    .ring {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+.lines {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: row !important;
+  top: 0;
+  right: 0;
+  gap: 4px !important;
+  height: 100%;
+  border-radius: 0px 12px 12px 0px;
+  div {
+    height: 100%;
+    width: 1px;
+    background-color: var(--stone-300);
+  }
+}
