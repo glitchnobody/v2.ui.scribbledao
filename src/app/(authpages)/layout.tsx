@@ -1,6 +1,6 @@
 import BookletBody from "@/components/ui/BookletBody";
 import WalletBase from "@/components/wallet/walletBase";
-import MoodBoard from "@/components/ui/MoodBoard";
+import MoodBoard from "@/components/ui/MoodBoardBackup";
 import styles from "./dashboard.module.css";
 
 export default function DashboardLayout({

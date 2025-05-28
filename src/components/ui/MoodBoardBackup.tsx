@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./moodboard.module.css";
+import styles from "./moodboardBackup.module.css";
 import DraggableCard from "@/components/ui/DraggableCard";
 import { useMoodBoard } from "../../lib/hooks/useMoodBoard";
 
@@ -16,7 +16,7 @@ interface cardProps {
   size?: "small" | "medium" | "large";
 }
 
-const MoodBoard: React.FC = () => {
+const MoodBoardBackup: React.FC = () => {
   const { cards, boardDimensions, boardRef, bringToFront, updatePosition } =
     useMoodBoard();
 
@@ -45,4 +45,4 @@ const MoodBoard: React.FC = () => {
   );
 };
 
-export default MoodBoard;
+export default MoodBoardBackup;
