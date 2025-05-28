@@ -12,7 +12,7 @@ import { Icon } from "@iconify/react";
 import SignupFlow from "@/components/auth/SignupFlow";
 import LoginFlow from "@/components/auth/LoginFlow";
 
-export default function Home() {
+export default function Auth() {
   const router = useRouter();
   const [isSignup, setIsSignup] = useState(true);
 

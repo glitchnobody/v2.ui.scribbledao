@@ -1,14 +1,13 @@
 .booklet_container {
   width: 100%;
   min-height: 400px;
-  max-width: 312px;
   border-radius: 12px;
-
   background-color: var(--stone-100);
   display: flex;
   padding: 24px 24px 24px 18px;
   align-items: center;
   position: relative;
+  box-shadow: var(--shadow-2);
   .rings {
     position: absolute;
     position: absolute;

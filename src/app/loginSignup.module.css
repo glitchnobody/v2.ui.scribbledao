@@ -49,7 +49,7 @@
     aspect-ratio: 1/1;
   }
   span {
-    color: var(--stone-100,);
+    color: var(--stone-100);
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -63,6 +63,7 @@
   align-items: center;
   justify-items: center;
   width: 100%;
+  max-width: 320px;
 }
 
 .flow_switch_container {

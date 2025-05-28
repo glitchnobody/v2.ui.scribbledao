@@ -34,7 +34,7 @@
     flex-direction: column;
     gap: 4px;
     label {
-      color: var(--stone-700, #1a1817);
+      color: var(--stone-700);
       font-size: 0.875rem;
       font-weight: 500;
       letter-spacing: -0.12px;
@@ -50,7 +50,7 @@
       border-radius: 8px;
       transition: border-color 0.2s var(--ease-default-linear);
       &:focus-within {
-        border-color: var(--purple-600, #a259f7);
+        border-color: var(--purple-600);
       }
       label {
         font-size: 0.75rem;
@@ -89,7 +89,7 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        color: var(--stone-600,);
+        color: var(--stone-600);
         font-size: 0.875rem;
         font-weight: 400;
         letter-spacing: -0.0075rem;
@@ -139,7 +139,7 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        color: var(--stone-600,);
+        color: var(--stone-600);
         font-size: 0.875rem;
         font-weight: 400;
         letter-spacing: -0.0075rem;

@@ -1,20 +1,15 @@
-"use client";
-import React from "react";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import Image from "next/image";
-import styles from "./dashboard.module.css";
-import Logo from "../Logo";
-import Link from "next/link";
 import BookletBody from "@/components/ui/BookletBody";
-import { Icon } from "@iconify/react";
 import WalletBase from "@/components/wallet/walletBase";
+import MoodBoard from "@/components/ui/MoodBoard";
+import styles from "./dashboard.module.css";
 
-export default function page() {
+export default function DashboardLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <main className={styles.dashboard}>
+    <div className={styles.dashboard}>
       <div className={styles.dashboard_panel_container}>
         <div className={styles.dashboard_side_panel}>
           <div className={styles.booklet_tab_container}>
@@ -29,8 +24,8 @@ export default function page() {
             <WalletBase />
           </div>
         </div>
-        <div className={styles.dashboard_main_panel}></div>
+        {children}
       </div>
-    </main>
+    </div>
   );
 }
